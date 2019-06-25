@@ -1,0 +1,11 @@
+{
+  "name": "feast-bot",
+  "version": "1.0.0",
+  "description": "Feast Color Tracker and Feast Scheduling",
+  "main": "bot.js",
+  "author": "Raconar",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "node-schedule": "^1.3.2"
+  }
+}
