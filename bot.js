@@ -28,8 +28,7 @@ client.on('message', message => {
 	console.log(message.author.bot);
 	//Stop running if the user posting is a bot
 	if(message.author.bot) return;
-	else message.channel.startTyping(100)
-	.catch(console.error);
+	else message.channel.startTyping(100);
 	
 	
     // Our client needs to know if it will execute a command
@@ -112,8 +111,7 @@ client.on('message', message => {
 				 }
 				if(takeAction !== -1){
 					// Delete User initiated command and post updated changes
-					if(c === 1 || i === 1) message.delete()
-					.catch(console.error);
+					if(c === 1 || i === 1) {message.delete() .catch(console.error);}
 					if(!(contributors.toString().includes(message.author.username))) contributors.push(message.author.username);
 					console.log(contributors);
 					console.log(feasts);
@@ -123,7 +121,6 @@ client.on('message', message => {
 		}while(i < c);
     } else message.react('✍🏼')
 				.catch(console.error);
-	message.channel.stopTyping(true)
-		.catch(conole.error);
+	message.channel.stopTyping(true);
 });
 client.login(process.env.token);
